@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# Portfolio: Mohammad Minhazul Abedin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, real-time personal portfolio built with modern engineering principles and Swiss design aesthetics. Scaled to showcase robust technical expertise and professional achievements.
 
-Currently, two official plugins are available:
+## 🚀 Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Smart Dynamic Navbar**: Intelligent scroll-behavior that stays stationary when needed and hides during deep focus.
+- **Immersive Sidebar Navigation**: Fully responsive mobile menu architecture with body-scroll locking and viewport-aware positioning.
+- **Newsprint Aesthetics**: Custom-engineered design system featuring a unique "Newsprint" texture and sharp-cornered brutalist UI.
+- **Automated Deployment**: Seamless CI/CD pipeline powering instant updates via GitHub Actions.
+- **Project Catalog**: Interactive showcases of high-performance systems and real-time architectures.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **State Management**: React Hooks (useState, useEffect)
+- **Deployment**: [GitHub Pages](https://pages.github.com/)
 
-## Expanding the ESLint configuration
+## 📂 Architecture
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+├── .github/workflows/    # Deployment and QA Evaluation pipelines
+├── src/
+│   ├── components/
+│   │   ├── layout/       # Shared structural wrappers (Section.tsx)
+│   │   ├── sections/     # Modular Hero, About, Experience, etc.
+│   │   └── ui/           # Primitive UI components
+│   ├── assets/           # Local static assets
+│   ├── utils/            # Helper functions
+│   ├── App.tsx           # Global state & Layout orchestrator
+│   └── main.tsx          # Client entry point
+└── public/               # Public static assets & metadata
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏗️ Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Prerequisites
+Ensure you have **Node.js 20+** installed.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2. Installation
+```bash
+git clone https://github.com/minuwu/minuwu.github.io.git
+cd minuwu.github.io
+npm install
 ```
+
+### 3. Development
+```bash
+npm run dev
+```
+
+### 4. Build
+```bash
+npm run build
+```
+
+## 🚀 Deployment
+
+This project uses **GitHub Actions** for automated deployment.
+- Pushing to the `main` branch triggers the `.github/workflows/deploy.yml` workflow.
+- The build artifacts are automatically uploaded to the `gh-pages` internal branch and served at `https://minuwu.github.io/`.
+
+## 🧪 Quality Assurance
+
+We maintain a lean CI pipeline via `evaluate.yml`:
+- **Unit Testing**: Powered by [Vitest](https://vitest.dev/).
+- **Linting**: Consistent code style enforced by [ESLint](https://eslint.org/).
+
+---
+
+Developed with ☕ and precision by **Mohammad Minhazul Abedin**.
