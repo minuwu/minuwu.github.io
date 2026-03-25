@@ -66,7 +66,7 @@ function App() {
       <nav className={`fixed top-0 left-0 right-0 w-full z-[100] bg-bg border-b-2 border-border transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className="h-20 flex items-center justify-between px-6 md:px-12 xl:px-24">
           <h1 className="font-serif font-black text-2xl tracking-tighter uppercase cursor-pointer hover:bg-primary hover:text-white px-2 py-1 transition-colors sharp-corners">
-            Minuwu
+            Minhaz
           </h1>
           <div className="flex gap-4 md:gap-8 items-center">
             <div className="hidden lg:flex gap-6 items-center">
